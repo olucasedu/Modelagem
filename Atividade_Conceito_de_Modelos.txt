@@ -1,0 +1,20 @@
+PROPÓSITOS DA MODELAGEM
+ATIVIDADE: CONCEITO DE MODELOS
+
+1. Três exemplos de modelos
+
+Mapa de uma cidade, maquete de uma casa e diagrama de classes.
+
+2. Propósito e utilidade
+
+Mapa de uma cidade: representa ruas e locais, ajudando na localização e na escolha de caminhos.
+
+Maquete de uma casa: representa uma construção em tamanho reduzido, permitindo visualizar seus espaços.
+
+Diagrama de classes: representa classes e seus relacionamentos, ajudando a planejar e entender um software.
+
+3. Características específicas e comuns
+
+O mapa usa símbolos e escala para representar a localização dos lugares. A maquete apresenta uma representação tridimensional da construção. O diagrama de classes utiliza uma notação com classes, atributos, métodos e relacionamentos.
+
+Todos simplificam aquilo que representam, destacando as informações relevantes para uma finalidade e facilitando a compreensão.

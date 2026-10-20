@@ -1,0 +1,22 @@
+PROPÓSITOS DA MODELAGEM
+ATIVIDADE: EXEMPLOS DE MODELOS GERAIS
+
+1. Exemplos
+
+Planta baixa de uma casa, modelo do sistema solar e fluxograma de atendimento.
+
+2. Propósito e utilidade
+
+Planta baixa: representa a distribuição dos cômodos, portas e janelas, ajudando a planejar os espaços da casa.
+
+Modelo do sistema solar: representa a organização dos planetas ao redor do Sol, facilitando seu estudo.
+
+Fluxograma de atendimento: mostra as etapas e decisões de um atendimento, ajudando a entender o processo.
+
+3. Como ajudam, vantagens e desvantagens
+
+Planta baixa: facilita a compreensão da disposição e das dimensões dos ambientes. A vantagem é permitir planejar os espaços; a desvantagem é não mostrar diretamente como a casa ficará em três dimensões.
+
+Modelo do sistema solar: ajuda a visualizar a ordem dos planetas. A vantagem é facilitar a compreensão visual; a desvantagem é que tamanhos e distâncias geralmente não seguem a mesma escala.
+
+Fluxograma de atendimento: esclarece a sequência das ações e os caminhos possíveis. A vantagem é facilitar a identificação de etapas desnecessárias; a desvantagem é poder ficar confuso quando o processo tem muitas decisões.

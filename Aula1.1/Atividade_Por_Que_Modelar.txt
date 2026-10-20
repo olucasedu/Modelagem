@@ -1,0 +1,24 @@
+PROPÓSITOS DA MODELAGEM
+ATIVIDADE: POR QUE MODELAR?
+
+1. MODELOS E SUAS FINALIDADES
+
+Diagrama de classes
+
+Ajuda a entender a estrutura do sistema e comunicar as relações entre conceitos, como Cliente, Pedido e Produto. Permite analisar responsabilidades, projetar as classes e documentar sua organização.
+
+Diagrama entidade-relacionamento (DER)
+
+Facilita o entendimento dos dados e a comunicação sobre como se relacionam. Ajuda a analisar cardinalidades e possíveis redundâncias, projetar o banco de dados e documentar sua estrutura.
+
+Diagrama de casos de uso
+
+Ajuda a entender as funcionalidades e comunicá-las aos usuários e desenvolvedores. Permite analisar requisitos, orientar o projeto das funcionalidades e documentar quem pode realizar cada ação.
+
+2. REPRESENTAÇÕES ALTERNATIVAS OU COMPLEMENTARES
+
+Diagrama de classes: um diagrama de sequência mostraria como essas classes interagem durante uma compra, algo que o diagrama de classes não detalha.
+
+DER: um dicionário de dados explicaria o significado, os tipos e as restrições de cada campo.
+
+Diagrama de casos de uso: descrições textuais dos casos de uso detalhariam os passos, as exceções e as regras que não aparecem no desenho.

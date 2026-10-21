@@ -1,0 +1,25 @@
+Atividade – Reflexão sobre o estudo de caso
+
+1. Estaria a equipe caindo em uma armadilha?
+
+Sim, pelo diagrama, existe o risco de colocar todos os conceitos em um único modelo e tentar resolver tudo da mesma forma. Além dos conceitos ligados ao trabalho com Scrum, aparecem pagamento, suporte, fórum e calendário. Conforme essas partes crescem, o modelo pode ficar difícil de entender e alterar.
+
+2. Houve desvio dos conceitos originais associados a projetos Scrum?
+
+Só pelos slides apresentados, não dá para afirmar exatamente quais conceitos tiveram seu significado alterado. Produto, item de backlog, lançamento e sprint podem estar relacionados em uma ferramenta de gestão, mas precisam manter suas diferenças. Um lançamento, por exemplo, não deve ser tratado automaticamente como uma sprint. A equipe precisa conferir com os especialistas se os nomes e as relações do modelo representam o trabalho realizado ou se foram adaptados apenas para facilitar a programação.
+
+3. O que dizer sobre a linguagem? É clara ou confusa? É consistente? É funcional?
+
+Alguns nomes são conhecidos, mas o conjunto parece confuso, porque mistura áreas diferentes e apresenta muitas relações. Não basta reconhecer as palavras: todos precisam entender o mesmo significado dentro de cada contexto. A consistência deve ser conferida nas conversas, nos documentos e no código. A linguagem só será funcional se ajudar a explicar as regras e orientar o desenvolvimento sem gerar interpretações diferentes.
+
+4. Haverá mais conceitos de suporte a cada conceito nomeado?
+
+Sim. Um pagamento pode envolver cobrança, vencimento e reembolso, enquanto um fórum pode envolver participantes, mensagens e moderação. Se todos esses detalhes forem adicionados ao mesmo modelo, ele ficará ainda mais difícil de manter. Por isso, é importante definir a qual área cada conceito pertence e quais informações realmente precisam ser compartilhadas.
+
+5. Caminhamos para uma “Grande Bola de Lama”?
+
+Existe esse risco. Uma Grande Bola de Lama é um sistema em que as responsabilidades e dependências ficam tão misturadas que se torna difícil entender sua organização. O número de conceitos, sozinho, não comprova isso, mas a mistura de áreas e as muitas ligações do diagrama são sinais de alerta. Se uma mudança no pagamento exigir alterações em várias partes sem relação direta com ele, por exemplo, isso pode indicar um acoplamento excessivo.
+
+6. Como lidar com isso?
+
+Eu começaria separando as áreas do negócio e conversando com os especialistas para entender suas regras. Gestão do trabalho com Scrum, faturamento, suporte, fórum e calendário seriam candidatos a contextos delimitados, mas essa divisão precisaria ser validada. Cada contexto teria seu próprio modelo e uma linguagem clara, compartilhando apenas o necessário por interfaces bem definidas. Também seria importante revisar as dependências e refatorar aos poucos. Essa organização pode ser feita em módulos dentro de um mesmo sistema, sem precisar transformar tudo em microsserviços.

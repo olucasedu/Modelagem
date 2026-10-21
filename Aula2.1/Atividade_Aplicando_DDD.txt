@@ -1,0 +1,49 @@
+Atividade – Aplicando DDD
+
+Transporte de passageiros com veículos de passeio
+
+1. Elementos do domínio central
+
+Considerando um serviço por aplicativo que busca oferecer corridas rápidas e confiáveis, eu colocaria no domínio central a solicitação da corrida, a definição da origem e do destino, a busca e a escolha do motorista, o aceite da solicitação, a previsão de chegada e o acompanhamento da viagem. Também incluiria as regras de cálculo do preço e de cancelamento. Esses elementos representam as decisões que fazem o serviço conectar o passageiro a um motorista e realizar a corrida.
+
+2. Outros domínios relacionados
+
+Os outros subdomínios seriam cadastro e autenticação, cadastro e verificação de motoristas e veículos, pagamentos e repasses, atendimento e suporte, avaliações e notificações. Eles ajudam o serviço a funcionar, mas podem ter regras e modelos separados do núcleo das corridas. A escolha do que é central depende da estratégia da empresa.
+
+3. Ligações entre o domínio central e os demais
+
+O passageiro que solicita a corrida está ligado ao cadastro e à autenticação. O motorista escolhido está ligado à verificação dos seus dados e do veículo. O valor calculado para a corrida é enviado para pagamentos, que realiza a cobrança e o repasse. A conclusão da viagem permite registrar avaliações. Cancelamentos e problemas podem gerar atendimentos no suporte, enquanto mudanças no estado da corrida podem gerar notificações. Cada área deve receber apenas as informações necessárias para cumprir sua função.
+
+4. Termos comuns com significados diferentes
+
+Corrida: na operação, é o serviço de transporte, com origem, destino, motorista e estado da viagem. No financeiro, pode ser representada como uma referência para cobrança e repasse, com valores e situação do pagamento.
+
+Motorista: na operação, é alguém disponível ou ocupado, com localização e capacidade de atender uma solicitação. No cadastro, é uma pessoa com documentos e um veículo associado. No financeiro, é o beneficiário dos repasses.
+
+Cancelamento: na operação, significa encerrar uma solicitação ou corrida antes da conclusão. No financeiro, pode envolver cancelar uma cobrança ou devolver um valor, conforme as regras aplicáveis.
+
+Conta: na autenticação, é o acesso do usuário ao aplicativo. No financeiro, pode indicar o registro de valores a receber ou os dados bancários usados nos repasses.
+
+5. Aplicação em um sistema de entregas de comida
+
+5.1. Elementos do domínio central
+
+Considerando um serviço que se destaca pela eficiência das entregas, o domínio central teria a solicitação da entrega, a atribuição do entregador, a coordenação da retirada com o preparo, a rota, a previsão de chegada e o acompanhamento até a entrega ao cliente. Também incluiria as regras para lidar com atrasos, falta de entregadores e cancelamentos. O objetivo é fazer a comida chegar no prazo e em boas condições.
+
+5.2. Outros domínios relacionados
+
+Os outros subdomínios seriam cadastro e autenticação, gestão de restaurantes e cardápios, recebimento e preparo dos pedidos pelo restaurante, pagamentos e repasses, promoções, suporte, avaliações e notificações. Nesta proposta, eles dão suporte ao núcleo de entregas. Se a estratégia fosse oferecer recomendações personalizadas de pratos, por exemplo, essa classificação poderia mudar.
+
+5.3. Ligações entre o domínio central e os demais
+
+A entrega recebe do pedido as informações necessárias para a retirada e o destino. O restaurante informa quando a comida estará pronta, ajudando a organizar a chegada do entregador. O cadastro fornece os dados necessários sobre cliente, restaurante e entregador. O valor da taxa de entrega pode ser enviado ao financeiro para cobrança e repasse. A entrega concluída permite solicitar avaliações, enquanto atrasos ou outros problemas podem gerar chamados no suporte e avisos ao cliente.
+
+5.4. Termos comuns com significados diferentes
+
+Pedido: para o restaurante, é uma lista de pratos, quantidades e observações de preparo. Para a logística, é uma referência ao que precisa ser retirado e entregue. Para o financeiro, é uma referência para valores, cobranças e reembolsos.
+
+Entrega: na logística, é o deslocamento da comida até o cliente, com entregador, rota e estado. No financeiro, pode aparecer como um serviço que gera uma taxa e um repasse.
+
+Disponibilidade: no cardápio, indica se um prato pode ser vendido. Na logística, indica se há entregadores aptos a atender uma solicitação.
+
+Cancelamento: no restaurante, pode interromper o preparo do pedido. Na logística, encerra a solicitação de entrega. No financeiro, pode exigir o cancelamento da cobrança ou um reembolso. Essas ações precisam ser coordenadas, mas não são a mesma coisa.

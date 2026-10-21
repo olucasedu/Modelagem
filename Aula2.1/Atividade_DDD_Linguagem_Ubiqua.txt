@@ -1,0 +1,24 @@
+Atividade – DDD: Linguagem Ubíqua
+
+1. Possíveis usos do termo “voo” em diferentes áreas
+
+Controle de Tráfego: o voo é visto como uma operação de deslocamento de uma aeronave entre uma origem e um destino. O interesse está na rota, na posição, na altitude, nos horários e na segurança da circulação no espaço aéreo.
+
+Aquisição de Passagens: o voo é uma opção de viagem que o cliente pode escolher e reservar. Nessa área, importam a origem, o destino, a data, os horários, o preço e a disponibilidade de assentos. Por exemplo, o cliente procura um voo de Uberlândia para São Paulo e escolhe uma das opções disponíveis.
+
+Faturamento: o voo pode ser uma referência para relacionar as vendas de passagens, os valores cobrados, as taxas e os reembolsos. O foco está nas informações financeiras ligadas à viagem, e não nos detalhes da operação da aeronave.
+
+Manutenção: o voo é considerado uma utilização da aeronave que gera horas de operação e ciclos, como os de decolagem e pouso. Essas informações ajudam a controlar o desgaste e planejar inspeções e serviços. Nessa área, importa saber qual aeronave realizou o voo e se houve algum problema técnico relatado.
+
+Assim, a palavra é a mesma, mas cada área precisa de informações e regras diferentes. Por isso, o significado deve ficar claro dentro de cada contexto, para evitar que as equipes usem o mesmo termo pensando em coisas diferentes.
+
+2. Possíveis domínios em que o termo seria aplicado
+
+Dentro do domínio geral do transporte aéreo, o termo poderia aparecer nos seguintes subdomínios:
+
+- Controle de tráfego aéreo e operações de voo: acompanhamento e organização do deslocamento das aeronaves.
+- Comercial, reservas e venda de passagens: oferta de viagens e controle das reservas dos passageiros.
+- Financeiro e faturamento: registro das receitas, cobranças, taxas e reembolsos relacionados aos voos.
+- Manutenção de aeronaves: controle da utilização, do desgaste e das necessidades de manutenção.
+
+Essas áreas podem orientar a definição de contextos delimitados, cada um com seu próprio modelo de voo. A divisão exata dependeria de entender as regras e conversar com os especialistas de cada área. Na comunicação entre os contextos, seria necessário deixar claro quais informações sobre o voo estão sendo compartilhadas.

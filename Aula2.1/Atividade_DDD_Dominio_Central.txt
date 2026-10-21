@@ -1,0 +1,21 @@
+Atividade – DDD: Domínio Central
+
+1. Conceitos que poderiam fazer parte do Domínio Central
+
+Considerando um serviço que quer se destacar pela rapidez e pela qualidade das entregas, eu colocaria no Domínio Central a gestão do pedido durante a entrega, a escolha do entregador, a previsão do tempo de chegada e o planejamento da rota. Também incluiria a coordenação entre o preparo da comida e a retirada pelo entregador, além do tratamento de problemas, como atrasos e falta de entregadores.
+
+2. Justificativa para incluir esses elementos
+
+Esses elementos estão ligados ao principal objetivo do serviço: fazer a comida chegar ao cliente no prazo e em boas condições. Escolher um entregador adequado e organizar a rota pode diminuir o tempo de espera. Coordenar a retirada com o preparo evita que a comida fique pronta muito antes de alguém buscá-la ou que o entregador espere demais no restaurante. Já a previsão de chegada e o tratamento dos atrasos ajudam a manter o cliente informado e resolver problemas. Eu incluiria essas partes porque melhorar essas regras pode diferenciar o serviço dos concorrentes. Assim, o Domínio Central depende também da estratégia da empresa, e não só do que é necessário para o sistema funcionar.
+
+3. Conceitos importantes que ficariam fora do Domínio Central
+
+Cadastro e autenticação de usuários: são necessários para identificar clientes, restaurantes e entregadores, mas usam soluções comuns a vários tipos de sistema. Por isso, poderiam fazer parte de um subdomínio genérico.
+
+Processamento de pagamentos: é importante para concluir a compra, mas pode ser feito por um serviço externo especializado. Neste exemplo, ficaria fora do Domínio Central, pois o diferencial escolhido está na operação das entregas.
+
+Cadastro de restaurantes e manutenção dos cardápios: dão suporte ao funcionamento da plataforma, permitindo informar os pratos, preços e disponibilidade. Eu os colocaria em um subdomínio de apoio, considerando que a estratégia está focada na entrega.
+
+Envio de e-mails, SMS e notificações: ajuda na comunicação com os usuários, mas o mecanismo de envio pode usar uma solução pronta. A regra que decide quando avisar sobre um atraso pode estar no domínio da entrega, enquanto a ferramenta que envia a mensagem fica fora dele.
+
+Relatórios administrativos e contabilidade: são importantes para acompanhar os resultados e organizar a empresa, mas não representam o diferencial do serviço de entrega. Por isso, também ficariam fora do Domínio Central.

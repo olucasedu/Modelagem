@@ -1,0 +1,35 @@
+Atividade – DDD: Limitações
+
+1. Casos em que a aplicação de DDD apresentou problemas
+
+Na pesquisa, encontrei dois problemas relatados por Jimmy Bogard em um projeto de gestão de processos da justiça juvenil do Texas. São duas situações da mesma experiência, e não dois projetos diferentes. O relato mostra limitações na aplicação de DDD, sem dizer que o sistema inteiro foi um fracasso.
+
+Caso 1 – Um modelo único para áreas diferentes
+
+O sistema precisava atender vários órgãos, mas não foram definidos contextos delimitados. Algumas palavras eram usadas por todos, só que com significados diferentes. Isso dificultava criar um modelo que atendesse às necessidades de cada grupo.
+
+Caso 2 – Padrões complexos usados em todo o sistema
+
+A equipe dedicou muito esforço a entidades, agregados, repositórios e outros padrões. Porém, a maior parte do sistema precisava de operações simples de cadastro, consulta, alteração e exclusão. Aplicar a mesma estrutura em tudo acabou limitando as opções de implementação.
+
+2. Causas apontadas para os problemas
+
+No primeiro caso, faltou separar os diferentes contextos do negócio. O cliente não aceitava dividir a solução em sistemas menores, e os grupos tinham objetivos e interpretações diferentes. Usar o mesmo nome para um conceito não significava que todos estavam falando da mesma coisa.
+
+No segundo, o erro foi dar mais atenção aos padrões técnicos do que às necessidades de cada parte. A estrutura foi pensada para os trechos mais complexos, embora eles representassem uma parcela pequena do sistema. Pelo que entendi, faltou adaptar o nível de complexidade ao problema real.
+
+3. Alternativas utilizadas
+
+Para o primeiro problema, em um projeto posterior de domínio semelhante, a equipe adotou contextos delimitados e camadas anticorrupção. Essas camadas traduziam os conceitos recebidos de outros sistemas, permitindo que cada contexto mantivesse seu próprio modelo e evoluísse com mais independência.
+
+Para o segundo, Bogard relata que os sistemas seguintes passaram a usar uma abordagem mais próxima de CQRS, separando comandos e consultas. Cada operação podia usar a solução mais adequada, desde SQL direto até modelos mais elaborados. Assim, as partes simples não precisavam seguir a mesma estrutura das partes complexas.
+
+Esses casos mostram que DDD exige entender bem o negócio e escolher onde aplicar cada padrão. A alternativa foi corrigir e simplificar sua aplicação, em vez de abandonar toda a abordagem.
+
+Fontes da pesquisa
+
+Jimmy Bogard – 10 Lessons from a Long Running DDD Project – Part 1:
+https://lostechies.com/jimmybogard/2016/06/13/10-lessons-from-a-long-running-ddd-project-part-1/
+
+Entrevista com Jimmy Bogard – The DDD Do-Over:
+https://www.infoq.com/articles/ddd-do-over/

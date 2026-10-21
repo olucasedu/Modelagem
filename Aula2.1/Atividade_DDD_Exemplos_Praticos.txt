@@ -1,0 +1,49 @@
+Atividade – DDD: Exemplos práticos
+
+1. Resumo dos casos
+
+Uber: A Uber passou a ter muitos microsserviços, o que dificultou entender as dependências e fazer mudanças. Para organizar isso, criou a arquitetura DOMA, agrupando serviços por domínio e definindo limites e formas de comunicação. Entendi que dividir o sistema em serviços não basta: também é preciso organizar as responsabilidades de cada parte.
+
+Netflix: No caso apresentado, a equipe precisava criar uma aplicação que usava dados de vários sistemas que ainda estavam mudando. A arquitetura hexagonal ajudou a separar as regras de negócio das fontes de dados. Assim, ficou mais fácil trocar uma integração sem precisar reescrever a lógica principal e também testar essa lógica separadamente.
+
+Spotify: O Spotify criou um modelo comum para representar domínios, sistemas e componentes. Com o Backstage e diagramas baseados no C4, as equipes conseguem visualizar as relações e os responsáveis por cada parte. Pelo que entendi, isso facilita a comunicação e ajuda a entender um sistema grande. O foco do texto é a modelagem e a visualização da arquitetura, sem detalhar uma implementação completa de DDD.
+
+iFood: O iFood usou DDD e Event Storming para entender melhor seu middleware financeiro e separar suas responsabilidades. Foram identificados três domínios principais: Gerenciamento de Dados Mestre, Provisão e Requisição. Eles deram origem a microsserviços que se comunicam por eventos, facilitando a manutenção e a evolução independente de cada parte.
+
+Amazon/AWS: Os materiais mostram como organizar software e dados a partir dos domínios do negócio. Na apresentação sobre DDD e DynamoDB, são abordados linguagem ubíqua, contextos delimitados e agregados, relacionando esses conceitos ao projeto do banco de dados. Já o texto sobre data mesh explica que os dados podem ser organizados por domínio, com equipes responsáveis por oferecê-los como produtos. A apresentação é de um profissional da Polestar, publicada pela AWS, então não se trata necessariamente de um relato sobre o sistema interno da loja Amazon.
+
+2. Conceitos e elementos de DDD
+
+Domínio e subdomínios: representam a área do negócio e suas partes. Aparecem na organização dos serviços da Uber e na divisão do sistema financeiro do iFood.
+
+Contextos delimitados (Bounded Contexts): definem os limites em que um modelo e suas regras fazem sentido. No iFood, ajudaram a separar responsabilidades. A organização por domínios da Uber também se relaciona a essa ideia.
+
+Linguagem ubíqua: é uma linguagem compartilhada entre quem entende do negócio e quem desenvolve o sistema. Ela aparece explicitamente no trabalho do iFood e na apresentação publicada pela AWS. No Spotify, a linguagem comum do modelo também ajuda na comunicação, embora o texto não a apresente como uma aplicação completa desse conceito de DDD.
+
+Entidades: representam elementos que possuem identidade. Elas são citadas no caso do iFood e aparecem entre os conceitos usados pela aplicação da Netflix.
+
+Agregados: agrupam elementos relacionados, com regras que precisam ser mantidas em conjunto. São citados no trabalho de modelagem do iFood e na apresentação sobre DDD e DynamoDB.
+
+Repositórios: oferecem uma forma de acessar os dados sem deixar os detalhes do armazenamento espalhados pela lógica principal. Aparecem no exemplo da Netflix.
+
+Eventos de domínio e Event Storming: os eventos representam acontecimentos importantes do negócio. O Event Storming ajuda as equipes a descobrir esses acontecimentos e os processos envolvidos, como foi feito no iFood.
+
+Também aparecem microsserviços, arquitetura hexagonal e data mesh. Essas abordagens podem ser combinadas com DDD, mas usar uma delas não significa, por si só, aplicar DDD.
+
+3. Outros dois casos de aplicação
+
+Grab – plataforma de integração com parceiros
+
+A Grab relatou o uso de DDD em uma aplicação escrita em Go para facilitar a integração de parceiros com seus serviços. A equipe conversou com especialistas do produto, separou contextos e identificou entidades, agregados e repositórios. Um exemplo é o projeto como raiz de agregado, reunindo relações com desenvolvedores e produtos. A experiência mostra uma aplicação prática para organizar um código que estava difícil de manter e deixar as responsabilidades mais claras.
+
+Allegro – plataforma de recomendações
+
+A equipe da plataforma de recomendações da Allegro usou a ideia de linguagem ubíqua do DDD na lógica e nos testes de integração. Os testes passaram a usar um contexto compartilhado e exemplos com significado, em vez de identificadores soltos e difíceis de entender. Segundo o relato, isso melhorou a leitura dos testes e facilitou sua manutenção. É um caso de aplicação de um princípio específico de DDD, sem afirmar que toda a plataforma segue todos os padrões da abordagem.
+
+Fontes dos dois casos pesquisados
+
+Grab – How We Implemented Domain-Driven Development in Golang:
+https://engineering.grab.com/domain-driven-development-in-golang
+
+Allegro – Let your tests tell a story:
+https://blog.allegro.tech/2015/11/let-your-tests-tell-a-story.html

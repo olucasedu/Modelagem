@@ -1,0 +1,31 @@
+Atividade – Identificar e classificar subdomínios: Gigmaster
+
+1. Domínio de negócios
+
+O domínio da Gigmaster é a venda e a distribuição de ingressos para shows. A empresa também ajuda os usuários a descobrir eventos próximos que combinam com seus gostos musicais. Pelo cenário, seu diferencial está nas recomendações personalizadas com proteção da privacidade.
+
+2. Subdomínios e classificação
+
+Recomendação de shows – principal: analisa as preferências musicais, a proximidade dos eventos e os dados disponíveis para sugerir shows interessantes. É o principal diferencial da empresa e exige regras próprias para gerar boas recomendações usando somente dados anônimos.
+
+Integração e preparação dos dados de preferências – suporte: reúne informações das bibliotecas musicais, dos serviços de streaming e das redes sociais, preparando os dados para a recomendação. É necessária para alimentar o núcleo, mas coletar e organizar essas informações não é, por si só, o diferencial escolhido.
+
+Histórico de shows assistidos – suporte: permite registrar eventos frequentados, mesmo quando os ingressos foram comprados em outra empresa. Ajuda a melhorar as recomendações e atende a uma necessidade específica da Gigmaster, mas o cadastro desse histórico é mais simples do que o algoritmo que usa essas informações.
+
+Gestão de eventos e ingressos – suporte: cuida dos dados dos shows, locais, datas, disponibilidade, reservas e emissão dos ingressos. É essencial para vender e distribuir ingressos, mas o cenário não apresenta uma inovação nessa área que a torne o principal diferencial.
+
+Pagamentos – genérico: processa as cobranças das compras. Pode usar um serviço de pagamento já existente, pois essa necessidade aparece em muitos negócios.
+
+Autenticação e criptografia – genérico: controla o acesso às contas e protege os dados pessoais com soluções consolidadas. Ser importante para a empresa não torna a criptografia um subdomínio principal. A Gigmaster pode usar ferramentas prontas em vez de criar seu próprio algoritmo de criptografia.
+
+Preparação de dados anônimos – suporte, nesta proposta: aplica as regras necessárias para que o sistema de recomendações receba somente dados anônimos. Daria suporte ao diferencial de privacidade. Se a empresa criasse uma técnica própria e difícil de copiar para recomendar sem identificar pessoas, essa capacidade também poderia integrar o subdomínio principal.
+
+3. Decisões de design
+
+Eu separaria recomendação, histórico, gestão de ingressos, pagamentos e identidade em módulos com responsabilidades claras. Cada módulo teria seu próprio modelo e interfaces para compartilhar apenas o necessário. Essa separação poderia começar dentro de um mesmo sistema, sem exigir microsserviços.
+
+Os dados pessoais ficariam protegidos e separados dos dados usados pelo algoritmo. Criptografar os dados não é a mesma coisa que torná-los anônimos: a criptografia permite recuperar a informação com uma chave. Por isso, seria necessário preparar os dados antes de enviá-los à recomendação e avaliar se combinações de informações poderiam identificar alguém.
+
+O histórico de shows assistidos ficaria separado do histórico de compras. Assim, registrar que alguém foi a um show não criaria uma compra nem um ingresso na Gigmaster. O módulo de recomendação receberia as informações desse histórico de forma compatível com a regra de anonimato.
+
+Também criaria adaptadores para integrar os serviços externos, evitando que uma mudança na API de streaming ou de uma rede social se espalhasse pelo sistema. Para autenticação, pagamentos e criptografia, usaria soluções consolidadas. O desenvolvimento próprio ficaria concentrado nas regras que diferenciam as recomendações da Gigmaster.

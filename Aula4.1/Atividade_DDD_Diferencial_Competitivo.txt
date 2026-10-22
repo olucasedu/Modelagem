@@ -1,0 +1,27 @@
+Atividade – Diferencial Competitivo
+
+1. Petrobras
+
+Diferencial competitivo: o conhecimento e a tecnologia para explorar e produzir petróleo em águas profundas e ultraprofundas, principalmente no pré-sal. Essa capacidade ajuda a empresa a atuar em locais de difícil acesso e melhorar a eficiência da produção.
+
+Subdomínio principal: exploração e produção em águas profundas. Nesse subdomínio, eu incluiria a análise de reservatórios, o planejamento da perfuração e a otimização da extração. São atividades que usam conhecimento especializado e influenciam diretamente os resultados do negócio.
+
+2. Nubank
+
+Diferencial competitivo: oferecer serviços financeiros pelo aplicativo, com uma experiência simples e prática para o cliente. A facilidade para acompanhar gastos e administrar os produtos financeiros ajuda a tornar o serviço atrativo.
+
+Subdomínios principais: experiência financeira digital e análise e concessão de crédito. Eu incluiria a organização das informações financeiras no aplicativo e as regras para avaliar o perfil do cliente e oferecer crédito. O processamento básico de uma transação é necessário, mas o diferencial pode estar em como a empresa facilita seu uso e toma decisões sobre suas ofertas.
+
+3. Tesla
+
+Diferencial competitivo: a integração entre veículos elétricos, baterias e software, permitindo desenvolver funções do carro de forma conectada. Essa integração pode melhorar a experiência de uso, o desempenho e a eficiência energética.
+
+Subdomínios principais: gestão de energia e bateria e software de controle do veículo. Eu incluiria as regras para controlar o consumo, a recarga, a autonomia estimada e o funcionamento dos sistemas do carro. Essas partes contribuem para diferenciar o produto oferecido pela empresa.
+
+4. Netflix
+
+Diferencial competitivo: ajudar cada usuário a encontrar conteúdos de seu interesse por meio de uma experiência personalizada, além de oferecer um catálogo atrativo. As recomendações facilitam a escolha do que assistir.
+
+Subdomínios principais: recomendação e personalização de conteúdo e seleção e desenvolvimento do catálogo. No primeiro, eu incluiria a análise das preferências e a organização dos títulos apresentados para cada perfil. No segundo, as decisões sobre conteúdos a produzir ou adquirir, considerando o interesse do público e os objetivos da empresa.
+
+Essas classificações são uma proposta de análise com DDD, e não uma descrição da arquitetura interna das empresas. O subdomínio principal depende da estratégia: é a parte em que a empresa concentra conhecimento e investimento para se diferenciar dos concorrentes.

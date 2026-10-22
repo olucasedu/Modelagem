@@ -1,0 +1,31 @@
+Atividade – Identificar e classificar subdomínios: BusVNext
+
+1. Domínio de negócios
+
+O domínio da BusVNext é o transporte público de passageiros sob demanda. A empresa administra frotas de ônibus nas cidades e permite solicitar viagens pelo aplicativo, ajustando as rotas para buscar os clientes. Seu objetivo é oferecer a praticidade de um táxi em uma viagem de ônibus.
+
+2. Subdomínios e classificação
+
+Roteamento e otimização das viagens – principal: define qual ônibus deve atender cada solicitação e como sua rota será ajustada. É a parte mais complexa e o principal diferencial da empresa. O algoritmo precisa ser melhorado continuamente conforme as necessidades dos passageiros. Um exemplo foi priorizar embarques mais rápidos para reduzir cancelamentos, mesmo que isso aumentasse o tempo até a chegada ao destino.
+
+Solicitação e agendamento de viagens – suporte: registra a origem, o destino e o horário solicitado pelo passageiro, além de acompanhar a situação da viagem. Fornece as informações necessárias ao roteamento, mas o cadastro e o acompanhamento das solicitações não são, por si só, o diferencial do algoritmo.
+
+Gestão operacional da frota – suporte: mantém informações sobre os ônibus, como localização, capacidade e disponibilidade para atender viagens. Essas informações ajudam o núcleo a escolher um veículo adequado. Nesta proposta, o controle da frota dá suporte às decisões de roteamento.
+
+Descontos e promoções – suporte: administra ofertas para atrair clientes e distribuir a demanda entre horários de pico e fora de pico. Tem regras ligadas ao negócio, mas o cenário não apresenta um mecanismo complexo de precificação que seja o principal diferencial da empresa.
+
+Informações de trânsito e alertas – genérico: são fornecidas por empresas terceirizadas e podem ser usadas em vários serviços de transporte. São importantes para o cálculo das rotas, mas a BusVNext não precisa desenvolver sua própria plataforma de monitoramento do trânsito. A adaptação desses dados para o modelo interno pode ficar em um módulo de suporte.
+
+Autenticação e notificações – genérico: embora não sejam detalhadas nos slides, seriam necessidades comuns do aplicativo, como acessar uma conta e receber avisos sobre a viagem. Poderiam usar soluções já existentes.
+
+3. Decisões de design
+
+Eu concentraria o desenvolvimento próprio no algoritmo de roteamento, mantendo suas regras separadas das telas e dos serviços externos. Isso facilitaria alterar os critérios usados para escolher as rotas e comparar os resultados das mudanças.
+
+Separaria os módulos de solicitação de viagens, frota, roteamento, promoções e integrações. Eles trocariam apenas as informações necessárias. Por exemplo, o módulo de viagens enviaria o horário e os locais solicitados, enquanto o de frota informaria os veículos disponíveis e suas capacidades. Essa organização poderia ser feita dentro de um mesmo sistema.
+
+Criaria adaptadores para os provedores de trânsito, traduzindo os dados recebidos para o formato usado pela BusVNext. Assim, trocar um fornecedor não exigiria mudar toda a lógica do roteamento. Também definiria como o sistema deve agir quando os dados externos estiverem atrasados ou indisponíveis.
+
+O algoritmo deveria considerar limites como a capacidade do ônibus e os compromissos já assumidos com outros passageiros. A prioridade de reduzir a espera precisaria ser equilibrada com limites para os atrasos nas chegadas, evitando prejudicar demais quem já está no veículo.
+
+Por fim, acompanharia indicadores como tempo de espera, atrasos, cancelamentos e ocupação dos ônibus. Esses resultados ajudariam a avaliar as mudanças no algoritmo e os efeitos das promoções, permitindo melhorar o serviço com base no que acontece nas viagens.
